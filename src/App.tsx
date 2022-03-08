@@ -1,25 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import * as C from './App.styles';
+import { items } from './data/items/items';
+import { categories } from './data/categories/categories';
+import { getCurrentMonth } from './data/helpers/dateFilter';
 
-function App() {
+const App = () => {
+
+  const [list, setList] = useState(items);
+  const [currentMonth, setCurrentMonth] = useState(getCurrentMonth());
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <C.Container>
+      <C.Header>
+        <C.HeaderText>Expense Tracker</C.HeaderText>
+      </C.Header>
+      <C.Body>
+
+        {/* INFO */}
+
+        {/* INSERT */}
+
+        {/* LIST */}
+        ...
+      </C.Body>
+    </C.Container>
   );
 }
 
