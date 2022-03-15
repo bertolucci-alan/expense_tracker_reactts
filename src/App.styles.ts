@@ -21,7 +21,6 @@ export const HeaderText = styled.h1`
 export const Body = styled.div`
     margin: auto;
     max-width: 980px;
-    background-color: purple;
     min-height: 680px;
     margin-bottom: 50px;
 `;
